@@ -47,6 +47,18 @@ export const editTask = async (req, res) => {
   }
 };
 
+export const markComplete = async (req, res) => {
+  const taskId = req.params.taskId;
+
+  try {
+    const updatedTask = await taskService.changeStatus({ taskId });
+    res.status(200).json(updatedTask);
+  } catch (error) {
+    console.error(error);
+    res.status(500).json({ msg: 'Server Error' });
+  }
+};
+
 export const deleteTask = async (req, res) => {
   const taskId = req.params.taskId;
   try {

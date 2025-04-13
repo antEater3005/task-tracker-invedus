@@ -1,0 +1,67 @@
+Full-Stack Developer Assignment (Simplified) 
+
+Assignment Title: 
+
+TaskTrackr – A simple task manager with user login 
+
+Objective: 
+
+Create a web app where: 
+- Users can register/login 
+- Users can create, update, and delete their personal tasks 
+- Tasks can be filtered by status 
+- Basic authentication is implemented (JWT) 
+- Includes both frontend and backend 
+
+Tech Stack: 
+
+- Frontend: React.js + Tailwind CSS 
+- Backend: Node.js + Express 
+- Database: MongoDB 
+- Authentication: JWT (Access + optional Refresh token) 
+
+Main Features: 
+
+Authentication: 
+
+- Register/Login page 
+- Protected routes (for dashboard access) 
+
+Task CRUD: 
+
+- Add a new task (title, description, due date, status) 
+- Edit a task 
+- Delete a task 
+- Mark as completed / pending 
+
+Task View: 
+
+- List all tasks of the logged-in user 
+- Filter by status: All / Completed / Pending 
+
+Bonus (Optional): 
+
+- Due date alert (toast) 
+- Search bar for task titles 
+- Admin user who can view all users and their tasks 
+
+Suggested API Endpoints: 
+
+Auth APIs: 
+
+POST   /api/register 
+POST   /api/login 
+GET    /api/profile     (JWT required) 
+
+Task APIs: 
+
+GET    /api/tasks 
+POST   /api/tasks 
+PUT    /api/tasks/:id 
+DELETE /api/tasks/:id 
+
+Submission: 
+
+- GitHub repo (separate client and server folders) 
+- README with setup steps 
+- Sample .env.example file 

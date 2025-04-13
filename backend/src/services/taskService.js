@@ -16,6 +16,16 @@ export const getTasksById = async (taskId) => {
     throw Error('Cannot find task' + error.message);
   }
 };
+
+export const changeStatus = async ({ taskId }) => {
+  try {
+    const task = await Task.findById(taskId);
+    task.status = !task.status;
+    return await task.save();
+  } catch (error) {
+    throw Error('Cannot changing status of task' + error.message);
+  }
+};
 export const getTasksByUserId = async (userId) => {
   try {
     return await Task.find({ userId });
